@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes and Testimonials</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/763f7d98b3.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="testimonial">
+            <h1> Inspirational Quotes </h1>
+            <div class="testimonial-text">
+                <div class="user-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>"Never stop fighting until you arrive at your destined place - the unique you. Have an aim in
+                        life, continuously acquire knowledge, work hard, and have perseverance to realise the great
+                        life."</p>
+                    <span>APJ Abdul Kalam, Former President of India</span>
+                </div>
+                <div class="user-text active-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>“I admire people who are very successful. But if that success has been achieved through too much
+                        ruthlessness, then I
+                        may admire that person, but I can not respect him.”</p>
+                    <span>Ratan Tata, Chairman Emeritus of Tata Sons</span>
+                </div>
+                <div class="user-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Nobody understands how the world will change. The only way you can plan for the future is to have
+                        scenarios. You have to
+                        have the courage to take a leap of faith on one of them.</p>
+                    <span>Anand Mahindra, Chairperson Mahindra and Mahindra</span>
+                </div>
+                <div class="user-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>“With my experience in life, I want to tell you that having good relationships, compassion and
+                        peace of mind is much
+                        more important than achievements, awards, degrees or money.”</p>
+                    <span>Sudha Murty, Chairperson Infosys Foundation</span>
+                </div>
+                <div class="user-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>From my experience and understanding, I believe money follows name and fame, while recognition
+                        calls for a huge amount
+                        of sacrifice. To get something, you have to lose something. That’s the rule of life.</p>
+                    <span>Lata Mangeshkar, Singer</span>
+                </div>
+            </div>
+            <div class="testimonial-pic">
+                <img src="images/apj.jpg" class="user-pic" onclick="showReview()">
+                <img src="images/rt.jpg" class="user-pic active-pic" onclick="showReview()">
+                <img src="images/anand.jpg" class="user-pic" onclick="showReview()">
+                <img src="images/sm.jpg" class="user-pic" onclick="showReview()">
+                <img src="images/lm.jpg" class="user-pic" onclick="showReview()">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let userTexts = document.getElementsByClassName("user-text");
+        let userPics = document.getElementsByClassName("user-pic");
+
+        function showReview() {
+            for (userPic of userPics) {
+                userPic.classList.remove("active-pic");
+            }
+            for (userText of userTexts) {
+                userText.classList.remove("active-text");
+            }
+            let i = Array.from(userPics).indexOf(event.target);
+            userPics[i].classList.add("active-pic");
+            userTexts[i].classList.add("active-text");
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
